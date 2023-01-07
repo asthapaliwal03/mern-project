@@ -12,6 +12,14 @@ export const getPost = async (req, res) => {
   }
 };
 
-export const createPost = (req, res) => {
-  res.send("Create post");
+export const createPost = async(req, res) => {
+ // res.send("Create post");
+ try {
+  const postMessage = await PostMessage.find();
+  console.log(postMessage);
+  res.status(200).json(postMessage);
+} catch (error) {
+  res.status(404).json({message:error.message});
+  console.log(error.message);
+}
 };
