@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import { AppBar, Container, Grid, Grow } from '@mui/material';
 import './App.css';
-import {AppBar, Container, Grid, Grow, Typography} from '@mui/material';
-import Posts from './Component/Posts';
 import Form from './Component/Form';
+import Posts from './Component/Posts';
 
 function App() {
+  
   return (
     <div className="App">
      <Container maxWidth='lg'>
